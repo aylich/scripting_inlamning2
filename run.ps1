@@ -1,2 +1,11 @@
-Write-Host "Hello, please enter your zodiac sign to get your horoscope:"
-$zodiacSign = Read-Host "Please enter the name name of the system for which a directory now is going to be created"
+# Välkomnar användaren
+Write-Host "Hello user!"
+
+# Ber användaren att skriva in sitt stjärntecken och sparar det i en variabel
+$zodiacSign = Read-Host "Please enter your zodiac sign:"
+
+#Hämtar modulfilen
+Import-Module "$PSScriptRoot\Get-Horoscope.psm1"
+
+
+Get-Horoscope
