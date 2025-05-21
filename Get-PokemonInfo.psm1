@@ -11,8 +11,8 @@ function Get-PokemonInfo {
         [PSCustomObject]@{
             Name       = $response.name
             ID         = $response.id
-            Types      = ($response.types | ForEach-Object { $_.type.name }) -join ", "
-            Abilities  = ($response.abilities | ForEach-Object { $_.ability.name }) -join ", "
+            Types      = ($response.types | ForEach-Object { $_.type.name }) -join ", " # Specifiering av typ
+            Abilities  = ($response.abilities | ForEach-Object { $_.ability.name }) -join ", " # Specifiering
         }
     }
     catch {
@@ -20,5 +20,5 @@ function Get-PokemonInfo {
     }
 }
 
-# Anropa funktionen:
+# Anropa funktionen - ska vara i ps1 och raderas härifrån:
 Get-PokemonInfo -pokemonName "pikachu"
