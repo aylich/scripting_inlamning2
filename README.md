@@ -2,7 +2,7 @@
 Kurs: Scripting och automatisering YH2024 Axel Weüdelskolan. Skapad av Ayla Mahmutovic, Pontus Ydström och Sandra Bäckström
 
 # Instruktioner för scriptet
-
+Öppna scriptet i valfri editor, exempelvis Visual Studio Code. Kör hela scriptet. Scriptet kommer ge information om Pokémon och den delen av scriptet som gör det ligger i en modul (psm1-fil).
 # Hur samarbetade vi
 Vi samarbetade genom att dela upp arbetet. Detta gjorde vi för att inte överkomplicera arbetet och skapa onödiga merge-konflikter. Eftersom Sandras arbete med README-filen är förhållandevis enkelt, så hjälpte hon både Ayla och Pontus med deras "uppgifter" och letade efter en gratis API-nyckel samt att hitta de script som behövdes för att få scriptet att fungera. 
 # Vem gjorde vad
