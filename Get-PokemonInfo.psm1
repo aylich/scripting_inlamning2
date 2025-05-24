@@ -7,7 +7,7 @@ function Get-PokemonInfo {
     try {
         $response = Invoke-RestMethod -Uri $url -Method Get
 
-         # Extrahera statistik från API i en hashtabell
+         # Extraherar statistiken från API i tabellformat för att ta fram stats
         $stats = @{}
         foreach ($stat in $response.stats) {
             $statName = $stat.stat.name
@@ -15,7 +15,7 @@ function Get-PokemonInfo {
             $stats[$statName] = $baseStat
         }
 
-        # Visa info om Pokémon i ett listformat (PSCustomObject)
+        # Visar info om Pokémon i ett listformat utifrån tabellen ovan (PSCustomObject)
         [PSCustomObject]@{
             Name             = $response.name
             ID               = $response.id
@@ -26,7 +26,7 @@ function Get-PokemonInfo {
             'Sp. Defense'    = $stats["special-defense"]
             Speed            = $stats["speed"]
             Types            = ($response.types | ForEach-Object { $_.type.name }) -join ", " # Specifiering av typ
-            Abilities        = ($response.abilities | ForEach-Object { $_.ability.name }) -join ", "  # Specifiering
+            Abilities        = ($response.abilities | ForEach-Object { $_.ability.name }) -join ", "
         }
     }
     catch {
