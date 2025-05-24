@@ -1,11 +1,11 @@
 # Välkomnar användaren
-Write-Host "Hello user!"
+Write-Host "Hello User!"
 
 # Ber användaren att skriva in sitt stjärntecken och sparar det i en variabel
-$zodiacSign = Read-Host "Please enter your zodiac sign:"
+$pokemonName = Read-Host "Please enter the name of a pokemon:"
 
-#Hämtar modulfilen
-Import-Module "$PSScriptRoot\Get-Horoscope.psm1"
+# Anropar modulfilen
+Import-Module "$PSScriptRoot\GetPokemonInfo.psm1"
 
-
-Get-Horoscope
+# Anropar funktionen från modulfilen
+Get-PokemonInfo -pokemonName $pokemonName
