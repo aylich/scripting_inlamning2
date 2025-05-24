@@ -1,7 +1,7 @@
 # Välkomnar användaren
 Write-Host "Hello User!"
 
-# Ber användaren att skriva in sitt stjärntecken och sparar det i en variabel
+# Ber användaren att skriva in en pokemon och sparar det i en variabel
 $pokemonName = Read-Host "Please enter the name of a pokemon:"
 
 # Anropar modulfilen
